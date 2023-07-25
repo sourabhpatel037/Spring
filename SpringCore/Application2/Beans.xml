@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="product1" class="com.product.ProductDetails">
+		<property name="productName" value="Iphone" />
+		<property name="price" value="90000" />
+		<property name="productID" value="iphone15" />
+	</bean>
+
+	<bean id="product2" class="com.product.ProductDetails">
+		<property name="productName" value="Samsung" />
+		<property name="price" value="56000" />
+		<property name="productID" value="Sam-galaxy-s8" />
+	</bean>
+
+	<bean id="order1" class="com.product.OrderDetails">
+		<property name="orderId" value="6266152077" />
+		<property name="orderPrice" value="1600.50" />
+		<property name="items">
+			<set>
+				<value>Coldrink</value>
+				<value>Coldrink</value>
+				<value>kurkure</value>
+				<value>chips</value>
+				<value>Fruits</value>
+				<value>Royal Stage</value>
+				<value>water</value>
+				<value>water</value>
+				<value>disposal</value>
+				<value>cigrett</value>
+			</set>
+		</property>
+	</bean>
+</beans>
