@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="product" class="com.flipkart.product.Product">
+		<constructor-arg value="101" />
+		<constructor-arg value="Hp Laptop" />
+	</bean>
+	
+	<bean id="order" class="com.flipkart.orders.Orders"
+		autowire="default">
+		<property name="orderId" value="order1234" />
+		<property name="orderValue" value="33000.00" />
+		<property name="product" ref="product" />
+	</bean>
+	
+	<bean id="orderMgmt" class="com.flipkart.orders.OrderManagement">
+		<property name="noOfOrders" value="1" />
+		<property name="totalAmount" value="30000" />
+		<property name="order" ref="order">
+		</property>
+	</bean>
+	
+</beans>
